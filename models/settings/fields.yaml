@@ -7,9 +7,6 @@ tabs:
       label: Use Matomo
       type: switch
       default: checked
-      options:
-          true: XX
-          false: YY
 
     server:
       label: Matomo Server
