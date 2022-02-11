@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<div class="report-widget" >
+  <h3><?= $matomoTitle ?></h3>
+  <iframe
+    id = "<?= $matomoIdent ?>"
+    width="100%"
+    src="https://<?= $matomoServer ?>/index.php?module=Widgetize<?= $matomoView ?>&action=iframe&disableLink=1&widget=1&moduleToWidgetize=<?= $matomoModule ?>&actionToWidgetize=<?= $matomoAction ?>&idSite=<?= $matomoSite ?>&token_auth=<?= $matomoAuthorization ?>&period=range&date=<?= e($this->property('period')) ?><?= $matomoExtra ?>&filter_limit=<?= e($this->property('rows')) ?>"
+    frameborder="0" marginheight="0" marginwidth="0" scrolling="no"
+    />
+  </iframe>
+</div>
+
+<script>
+  iFrameResize({
+  	log                     : false,                  // Enable console logging
+  	resizedCallback         : function(messageData){ // Callback fn when resize is received
+      $(window).trigger('resize');
+  	},
+    tolerance: 10,
+    heightCalculationMethod: 'lowestElement',
+    interval: 1000,
+  }, "#<?= $matomoIdent ?>");
+</script>

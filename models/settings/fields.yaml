@@ -1,0 +1,95 @@
+tabs:
+  stretch: true
+  defaultTab: Site-wide Settings
+  fields:
+
+    matomoUsed:
+      label: Use Matomo
+      type: switch
+      default: checked
+      options:
+          true: XX
+          false: YY
+
+    server:
+      label: Matomo Server
+      span: auto
+      type: text
+      comment: Matomo server used, e.g., matomo.org. Do not prefix by http:// or https//.
+      trigger:
+        action: hide
+        field: matomoUsed
+        condition: unchecked
+
+    site:
+      label: Matomo Site ID
+      span: auto
+      type: Number
+      min: 1
+      comment: Matomo site ID used for reporting in Winter's backend dashboard. The ID must be be created in and obtained from Matomo's backend (All Websites).
+      trigger:
+        action: hide
+        field: matomoUsed
+        condition: unchecked
+
+    authorization:
+      label: Matomo Auth Token
+      span: auto
+      type: text
+      comment: Matomo auth token used for reporting in Winter's backend dashboard. The token must be created in and obtained from Matomo's backend (Administration -> Personal -> Settings -> Auth Tokens). Note that such tokens cannot be generated from the admin account. Instead, greate a user account and grant the user access to teh same Matomo site ID as specified above.
+      trigger:
+        action: hide
+        field: matomoUsed
+        condition: unchecked
+
+    tracking:
+      label: Matomo Tracking Method (not yet implemented)
+      span: auto
+      type: dropdown
+      default: javaimage
+      comment: Method used for visitor tracking. For the time being, this plugin tracks via JavaScript or - when absent - with an image. Other variations, such as custom tracking will be implemented at a later stage.
+      disabled: true
+      options:
+          java: JavaScript
+          javaimage: JavaScript, image if JavaScript disabled
+          image: Image
+          custom: Custom tracking code
+          none: No tracking
+      trigger:
+        action: hide
+        field: matomoUsed
+        condition: unchecked
+
+    backendTracking:
+      label: Winter Backend User Tracking
+      span: auto
+      type: switch
+      default : false
+      comment: Track users loged into Winter's backend. This is disabled by default to not distort the analytical data. If this option is enabled and (backend) users are still not reported in Matomo, check for the exclusion of certain IP addresses in Matomo's backend.
+      trigger:
+        action: hide
+        field: matomoUsed
+        condition: unchecked
+
+    dashboard:
+      label: Winter Dashboard Widgets
+      span: auto
+      type: switch
+      default : true
+      comment: Display Matomo Widgets in Winter's Dashboard. Use might be suspended (temporarily) as it might be too time-consuming. Note that unchecking this setting will NOT prevent the tracking itself, just the rendering of the dashboard.
+      trigger:
+        action: hide
+        field: matomoUsed
+        condition: unchecked
+
+    description:
+      span: full
+      type: partial
+      path: ~/plugins/mercator/matomo/partials/description.htm
+      tab: Details
+
+    about:
+      span: full
+      type: partial
+      path: ~/plugins/mercator/matomo/partials/about.htm
+      tab: About

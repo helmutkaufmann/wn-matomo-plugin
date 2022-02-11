@@ -1,0 +1,19 @@
+{
+    "name": "mercator/wn-matomo-plugin",
+    "type": "winter-plugin",
+    "description": "Winter CMS Matomo Analytics Plugin",
+    "homepage": "https://github.com/helmutkaufmann/wn-matomo-plugin",
+    "keywords": ["winter", "wintercms", "laravel", "Matomo", "Analytics", "Google", "Analytics", "Replacement", "php"],
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Helmut Kaufmann",
+            "role": "Author"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0",
+        "composer/installers": "~1.0"
+    }
+}
