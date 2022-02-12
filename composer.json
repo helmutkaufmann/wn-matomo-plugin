@@ -9,6 +9,8 @@
         {
             "name": "Helmut Kaufmann",
             "role": "Author"
+            "email": "software+gitbub@mercator.li",
+            "homepage": "https://mercator.li",
         }
     ],
     "minimum-stability": "dev",
