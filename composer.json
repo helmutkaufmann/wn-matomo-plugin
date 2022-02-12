@@ -8,9 +8,9 @@
     "authors": [
         {
             "name": "Helmut Kaufmann",
-            "role": "Author"
+            "role": "Author",
             "email": "software+gitbub@mercator.li",
-            "homepage": "https://mercator.li",
+            "homepage": "https://mercator.li"
         }
     ],
     "minimum-stability": "dev",
