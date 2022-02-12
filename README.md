@@ -5,6 +5,9 @@ Matomo Analytics is a [WinterCMS](https://wintercms.com) plugin for
 that lets website owners own their analytical data and protect their
 customers' privacy.
 
+![](READMEImage01.png)
+
+
 ## Prerequisites
 
 You must have access to Matomo, either through the cloud services provides by
