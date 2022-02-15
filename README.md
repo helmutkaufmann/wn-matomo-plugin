@@ -1,7 +1,7 @@
 # Matomo Analytics
 
 Matomo Analytics is a [WinterCMS](https://wintercms.com) plugin for
-[Matomo](https://matomo.org), Google Analytics alternative
+[Matomo](https://matomo.org), a Google Analytics alternative
 that lets website owners own their analytical data and protect their
 customers' privacy.
 
@@ -10,10 +10,10 @@ customers' privacy.
 
 ## Prerequisites
 
-You must have access to Matomo, either through the cloud services provides by
+You must have access to Matomo, either through the cloud services provided by
 [Matomo](https://matomo.org) or a
-[private Matomo instance](https://matomo.org/matomo-on-premise/)
-you have access to.
+[private Matomo instance](https://matomo.org/matomo-on-premise/). If you are
+paranoid about privacy, you might want to go for a private instance.
 
 ## Installation
 
@@ -23,7 +23,7 @@ Use Composer to install the plugin by executing
 composer require mercator/wn-matomo-plugin
 ```
 
-and run
+and running
 ```
 php artisan winter:up
 php artisan cache:clear
@@ -39,19 +39,25 @@ Installation from the [WinterCMS](https://wintercms.com) backend will be
 added once the [WinterCMS](https://wintercms.com) marketplace is available.
 
 ## Plugin Usage
+You must have basic knowledge about Matomo in order to use this plugin,
+in particular, you must know how to create new tracking instances,
+users and security tokens. Don't be worried. This is quite easy to
+learn by playing around with Matomo.
 ### Configuration
 On the Winter backend, go to the settings of the plugin Matomo Analytics.
 
 To get Matomo Analytics running,
-- identify the analytics server you intend to use (e.g., **matomo.org**).
+- identify the analytics server you intend to use (e.g., matomo.org).
 - in the Matoma backend set your CMS server up for tracking and note down the
 server ID
-- again in the in the Matoma backend generate a security token (Auth Token)
+- again in the in the Matoma backend generate a security token (so-called "Auth Token")
 - enter the above three items in Winter CMS's backend section of the plugin
 - goto the CMS section of Winter CMS and drag-drop the tracking code onto the
 layout(s) of your Winter site.
 
-With that, Matomo Should start tracking.
+With that, Matomo should start tracking and you should see results shortly.
+Note that Matomo provides near-realtime results with an emphasis on "near",
+so you might have to wait a few minutes to see first results.
 
 ### Dashboard Reporting
 Goto Winter's Dashbaord and add a new widget. Select *Matomo Widget* as the
@@ -62,7 +68,8 @@ the reporting period (7/30/360 days) as well as the way the report is
 rendered (e.g., a pie chart). It is also possible to export the data of
 an individual report.
 
-In addition, the full Matomo Dashboard - as it is found in Matomo's backend - is available.
+In addition, the full Matomo Dashboard is available. This is a replica of
+the dashboard found in Matomo's backend.
 Simply select *Matomo Dashboard* as the widget type when creating the widget in in Winter's dashbaord.
 
 ## Thank You
