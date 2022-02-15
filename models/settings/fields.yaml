@@ -18,6 +18,17 @@ tabs:
         field: matomoUsed
         condition: unchecked
 
+    serverHTTPS:
+      label: Secure Matomo Server
+      span: auto
+      type: switch
+      default: true
+      comment: Matomo server using https. Re-think security if it does not...
+      trigger:
+        action: hide
+        field: matomoUsed
+        condition: unchecked
+
     site:
       label: Matomo Site ID
       span: auto

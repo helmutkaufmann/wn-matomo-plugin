@@ -5,7 +5,7 @@
   <iframe
     id = "<?= $matomoIdent ?>" style="border: none";
     width="100%"
-    src="https://<?= $matomoServer ?>/index.php?module=Widgetize<?= $matomoView ?>&action=iframe&disableLink=1&widget=1&moduleToWidgetize=<?= $matomoModule ?>&actionToWidgetize=<?= $matomoAction ?>&idSite=<?= $matomoSite ?>&token_auth=<?= $matomoAuthorization ?>&period=range&date=<?= e($this->property('period')) ?><?= $matomoExtra ?>&filter_limit=<?= e($this->property('rows')) ?>"
+    src="<?= $matomoServerHTTPS ?>://<?= $matomoServer ?>/index.php?module=Widgetize<?= $matomoView ?>&action=iframe&disableLink=1&widget=1&moduleToWidgetize=<?= $matomoModule ?>&actionToWidgetize=<?= $matomoAction ?>&idSite=<?= $matomoSite ?>&token_auth=<?= $matomoAuthorization ?>&period=range&date=<?= e($this->property('period')) ?><?= $matomoExtra ?>&filter_limit=<?= e($this->property('rows')) ?>"
     frameborder="0" marginheight="0" marginwidth="0" scrolling="no" margin="0"
     />
   </iframe>

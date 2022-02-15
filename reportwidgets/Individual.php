@@ -145,6 +145,7 @@ class Individual extends ReportWidgetBase
          * Settinbgs on the plugin level
          */
         $this->vars['matomoServer'] = Settings::get('server');
+        $this->vars['matomoServerHTTPS'] = (Settings::instance()->attributes['serverHTTPS'] ? "https" : "http");
         $this->vars['matomoAuthorization'] = Settings::get('authorization');
         $this->vars['matomoSite'] = Settings::get('site');
         $this->vars['matomoIdent'] = "matomo" . rand();

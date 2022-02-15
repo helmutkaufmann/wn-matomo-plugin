@@ -65,6 +65,7 @@ class Dashboard extends ReportWidgetBase
         }
 
         $this->vars['matomoServer'] = Settings::instance()->attributes['server'];
+        $this->vars['matomoServerHTTPS'] = (Settings::instance()->attributes['serverHTTPS'] ? "https" : "http");
         $this->vars['matomoAuthorization'] = Settings::instance()->attributes['authorization'];
         $this->vars['matomoSite'] = Settings::instance()->attributes['site'];
         $this->vars['matomoIdent'] = "matomo" . rand();
