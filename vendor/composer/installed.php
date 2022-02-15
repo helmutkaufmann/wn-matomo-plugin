@@ -5,7 +5,7 @@
         'type' => 'winter-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '9dc09235c8774a2f6f84e2a7a5efe723654ba5d9',
+        'reference' => '39b115f6d9e3e764da90eeccfe4a772132c6134d',
         'name' => 'mercator/wn-matomo-plugin',
         'dev' => true,
     ),
@@ -25,7 +25,7 @@
             'type' => 'winter-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '9dc09235c8774a2f6f84e2a7a5efe723654ba5d9',
+            'reference' => '39b115f6d9e3e764da90eeccfe4a772132c6134d',
             'dev_requirement' => false,
         ),
         'roundcube/plugin-installer' => array(
