@@ -81,6 +81,11 @@ The *Reports* tab in the backend provides a list of the available reports.
 
 ![](READMEMatomoReports.png)
 
+If you see empty widgets on your Winter Dashboard
+- review the configuration settings in the backend
+- review the configuration settings of the widget, in particular that you
+have indeed selected a report and that the representation makes sense
+
 ## Thank You
 I would like to thank the guys from [WinterCMS](https://wintercms.com) for their
 ongoing support - not just for getting this plugin done but also the other ones
