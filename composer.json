@@ -1,9 +1,9 @@
 {
     "name": "mercator/wn-matomo-plugin",
     "type": "winter-plugin",
-    "description": "Matomo Analytics is a WinterCMS plugin for Matomo, a Google Analytics alternative that lets website owners own their analytical data and protect their customers' privacy. The plugin provides a Winter component for tracking users (to be installed on, e.g., laouts or CMS pages). The key element though are Winter Dashboard widgets for use in the Winter backend.",
+    "description": "Matomo Analytics is a WinterCMS plugin for Matomo, a Google Analytics alternative that lets website owners own their analytical data and protect their customers' privacy. It provides tracking as well as reporting functionality.",
     "homepage": "https://github.com/helmutkaufmann/wn-matomo-plugin",
-    "keywords": ["winter", "wintercms", "laravel", "Matomo", "analytics", "Google", "replacement", "php"],
+    "keywords": ["winter", "cms", "wintercms", "laravel", "Matomo", "analytics", "Google", "replacement", "php"],
     "license": "GPL-3.0-or-later",
     "authors": [
         {
@@ -13,6 +13,16 @@
             "homepage": "https://mercator.li"
         }
     ],
+    "funding": [
+        {
+            "type": "other",
+            "url": "https://www.paypal.com/donate/?hosted_button_id=MZYBN2NEDEDNC"
+        }
+    ],
+    "support": {
+        "email": "software+matomo@mercator.li",
+        "issues": "https://mercator.li/contact"
+    },
     "minimum-stability": "dev",
     "require": {
 	"php": ">=7.2.9",
