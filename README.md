@@ -81,7 +81,13 @@ The *Reports* tab in the backend provides a list of the available reports.
 
 ![](READMEMatomoReports.png)
 
-If you see empty widgets on your Winter Dashboard
+## First Aid
+
+If you cannot select *Matomo Widget* or *Reports* whhen adding a widget,
+review the configuration settings in the backend. In particular ensure that
+*Winter Dashboard Widgets* is enabled.
+
+Should you see empty widgets on your Winter Dashboard
 - review the configuration settings in the backend
 - review the configuration settings of the widget, in particular that you
 have indeed selected a report and that the representation makes sense
