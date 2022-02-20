@@ -15,8 +15,6 @@ use System\Classes\PluginBase;
 use Mercator\Matomo\Models\Settings;
 use Yaml;
 
-use Mercator\Matomo\Components\MatomoTracker;
-
 /**
  * Matomo Plugin Information File
  */
@@ -65,7 +63,6 @@ class Plugin extends PluginBase
         $matomoReports .= "";
         $settings = Settings::instance();
         $settings->mercator_matomo_reports = $matomoReports;
-
     }
 
     /**
@@ -74,7 +71,14 @@ class Plugin extends PluginBase
      * @return array
      */
     public function registerComponents() {
-        return [
+
+        if (Settings::get("phpTracking", false))
+          return [
+              'Mercator\Matomo\Components\Matomo' => 'Matomo',
+              'Mercator\Matomo\Components\MatomoTrackerAPI' => 'MatomoTrackingAPI'
+          ];
+        else
+          return [
             'Mercator\Matomo\Components\Matomo' => 'Matomo',
         ];
     }

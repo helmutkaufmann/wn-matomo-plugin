@@ -80,17 +80,17 @@ tabs:
         field: matomoUsed
         condition: unchecked
 
-    php:
+    phpTracking:
       label: Include PHP class
       span: auto
       type: switch
       default : false
-      comment: Include Matomo PHP classes for use in Twig. This feature has not yet been implemented.
+      comment: Include Matomo Tracking API for use in Twig. This feature has not yet been fully implemented.
       trigger:
         action: hide
         field: matomoUsed
         condition: unchecked
-      disabled: true
+      disabled: false
 
     description:
       span: full
