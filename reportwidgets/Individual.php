@@ -55,7 +55,7 @@ class Individual extends ReportWidgetBase
  	            'report' => [
                  	'title'       => 'Report',
                  	'type'        => 'dropdown',
-                 	'default'     => 'visitor_vowg',
+                 	'default'     => 'widgetVisitFrequencygetEvolutionGraphforceView1viewDataTablegraphEvolution',
      		          'required'    => '1',
                  	'placeholder' => 'Select report',
                   'options' => $matomoReports,
