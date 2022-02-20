@@ -75,7 +75,7 @@ class Plugin extends PluginBase
         if (Settings::get("phpTracking", false))
           return [
               'Mercator\Matomo\Components\Matomo' => 'Matomo',
-              'Mercator\Matomo\Components\MatomoTrackerAPI' => 'MatomoTrackingAPI'
+              'Mercator\Matomo\Components\MatomoTrackerAPI' => 'MatomoTrackingAPI',
           ];
         else
           return [
