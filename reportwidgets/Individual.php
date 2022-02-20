@@ -144,10 +144,22 @@ class Individual extends ReportWidgetBase
         /**
          * Settinbgs on the plugin level
          */
-        $this->vars['matomoServer'] = (parse_url(Settings::get('server'))["host"] == "" ? "https" : parse_url(Settings::get('server'))["host"]);
-        $this->vars['matomoServerHTTPS'] = parse_url(Settings::get('server'))["scheme"] . (array_key_exists("path", parse_url(Settings::get('server'))) ? "/" . parse_url(Settings::get('server'))["path"] : "");
 
+        // The following code should be revisited with PHP8
+        switch (substr(Settings::get('server'), 0, 5)) {
+          case "https":
+            $this->vars['matomoServerHTTPS'] = "https";
+            $this->vars['matomoServer'] = (parse_url(Settings::get('server'), PHP_URL_HOST) ? parse_url(Settings::get('server'), PHP_URL_HOST) : "Matomo server not defined");
+            break;
+          case "http:":
+            $this->vars['matomoServerHTTPS'] = "http";
+            $this->vars['matomoServer'] = (parse_url(Settings::get('server'), PHP_URL_HOST) ? parse_url(Settings::get('server'), PHP_URL_HOST) : "Matomo server not defined");
+            break;
+          default:
+            $this->vars['matomoServerHTTPS'] = "https";
+            $this->vars['matomoServer'] = (Settings::get('server') ? Settings::get('server') : "Matomo server not defined");
 
+        }
         $this->vars['matomoAuthorization'] = Settings::get('authorization');
         $this->vars['matomoSite'] = Settings::get('site');
         $this->vars['matomoIdent'] = "matomo" . rand();

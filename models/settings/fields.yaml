@@ -12,7 +12,8 @@ tabs:
       label: Matomo Server
       span: auto
       type: text
-      comment: Matomo server used, e.g., https://matomo.org. If neither https or http is specified, https is assumed.
+      comment: Matomo server used, e.g., https://matomo.org. If neither https nor http is specified, https is assumed.
+      default: https://matomo.org
       trigger:
         action: hide
         field: matomoUsed
