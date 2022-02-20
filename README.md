@@ -5,9 +5,6 @@ Matomo Analytics is a [WinterCMS](https://wintercms.com) plugin for
 that lets website owners own their analytical data and protect their
 customers' privacy.
 
-![](READMEImage01.png)
-
-
 ## Prerequisites
 
 You must have access to Matomo, either through the cloud services provided by
@@ -74,7 +71,7 @@ the reporting period (7/30/360 days) as well as the way the report is
 rendered (e.g., a pie chart). It is also possible to export the data of
 an individual report.
 
-![](READMEMatomoDashboard.png) 
+![](READMEMatomoDashboard.png)
 
 In addition, the full Matomo Dashboard is available. This is a replica of
 the dashboard found in Matomo's backend.
