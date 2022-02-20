@@ -109,7 +109,7 @@ Helmut can be reached by mail at <software@mercator.li>.
 
 While it might look simple, putting this plugin together took some time.
 So, if you find it useful, feel free to sponsor a beer, two or
-more are welcome as well. [Paypal](https://www.paypal.com/donate/?hosted_button_id=MZYBN2NEDEDNC) might
+more are welcome as well. [PayPal](https://www.paypal.com/donate/?hosted_button_id=MZYBN2NEDEDNC) might
 be your best friend for this...
 
 ## License
