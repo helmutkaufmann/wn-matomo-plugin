@@ -64,8 +64,9 @@ class Dashboard extends ReportWidgetBase
             $this->vars['error'] = $ex->getMessage();
         }
 
-        $this->vars['matomoServer'] = Settings::instance()->attributes['server'];
-        $this->vars['matomoServerHTTPS'] = (Settings::instance()->attributes['serverHTTPS'] ? "https" : "http");
+        $this->vars['matomoServer'] = (parse_url(Settings::get('server'))["host"] == "" ? "https" : parse_url(Settings::get('server'))["host"]);
+        $this->vars['matomoServerHTTPS'] = parse_url(Settings::get('server'))["scheme"] . (array_key_exists("path", parse_url(Settings::get('server'))) ? "/" . parse_url(Settings::get('server'))["path"] : "");
+
         $this->vars['matomoAuthorization'] = Settings::instance()->attributes['authorization'];
         $this->vars['matomoSite'] = Settings::instance()->attributes['site'];
         $this->vars['matomoIdent'] = "matomo" . rand();

@@ -22,6 +22,8 @@ class ComposerStaticInit600a0b6a1a802c1e28f4f932b399067e
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'MatomoTracker' => __DIR__ . '/..' . '/matomo/matomo-php-tracker/MatomoTracker.php',
+        'PiwikTracker' => __DIR__ . '/..' . '/matomo/matomo-php-tracker/PiwikTracker.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

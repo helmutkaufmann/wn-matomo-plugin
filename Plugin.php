@@ -15,6 +15,8 @@ use System\Classes\PluginBase;
 use Mercator\Matomo\Models\Settings;
 use Yaml;
 
+use Mercator\Matomo\Components\MatomoTracker;
+
 /**
  * Matomo Plugin Information File
  */
@@ -53,15 +55,17 @@ class Plugin extends PluginBase
     public function boot() {
 
         $availableReports = Yaml::parseFile(plugins_path(). "/mercator/matomo/reports.yaml");
-        $matomoReports="<nl>";
+        $matomoReports="";
         foreach($availableReports as $acronym => $details) {
-            $matomoReports .= "<li class='help-block'><b>" . $details['t'] . "</b><br>";
-            $matomoReports .= (array_key_exists("d", $details) ? $details['d'] : "<em>Sorry, no description available.</em>");
-            $matomoReports .= "</li>";
+            $matomoReports .= "<p class='help-block'><b>" . $details['t'] . "</b><br> ";
+            $matomoReports .= (array_key_exists("d", $details) && ($details["d"] != "") ? $details['d'] : "<em>Sorry, no description available.</em>");
+            $matomoReports .= "</p>";
+            // $matomoReports .= ("<p>" . $details['t'] . "</b><br>". (array_key_exists("d", $details) ? $details['d'] : "") . "</p>");
         };
-        $matomoReports .= "</nl>";
+        $matomoReports .= "";
         $settings = Settings::instance();
         $settings->mercator_matomo_reports = $matomoReports;
+
     }
 
     /**

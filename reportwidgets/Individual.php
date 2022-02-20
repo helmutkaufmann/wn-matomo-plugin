@@ -144,8 +144,10 @@ class Individual extends ReportWidgetBase
         /**
          * Settinbgs on the plugin level
          */
-        $this->vars['matomoServer'] = Settings::get('server');
-        $this->vars['matomoServerHTTPS'] = (Settings::instance()->attributes['serverHTTPS'] ? "https" : "http");
+        $this->vars['matomoServer'] = (parse_url(Settings::get('server'))["host"] == "" ? "https" : parse_url(Settings::get('server'))["host"]);
+        $this->vars['matomoServerHTTPS'] = parse_url(Settings::get('server'))["scheme"] . (array_key_exists("path", parse_url(Settings::get('server'))) ? "/" . parse_url(Settings::get('server'))["path"] : "");
+
+
         $this->vars['matomoAuthorization'] = Settings::get('authorization');
         $this->vars['matomoSite'] = Settings::get('site');
         $this->vars['matomoIdent'] = "matomo" . rand();
@@ -170,6 +172,7 @@ class Individual extends ReportWidgetBase
         $this->vars['matomoExtra'] = (isset($matomoReport['e']) ? "&" . $matomoReport['e'] : "");
         $this->vars['matomoView'] =
           (strcmp($this->property("view"), "default") ? "&viewDataTable=" . $this->property("view") : "");
+        // $this->vars['matomoView'] = "";
 
         return $this->makePartial('individual');
 

@@ -16,6 +16,7 @@
     "minimum-stability": "dev",
     "require": {
 	"php": ">=7.2.9",
-        "composer/installers": "~1.0"
+        "composer/installers": "~1.0",
+        "matomo/matomo-php-tracker": "dev-master"
     }
 }

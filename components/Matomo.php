@@ -5,6 +5,7 @@ use Cms\Classes\ComponentBase;
 use Backend\Facades\BackendAuth;
 use Winter\User\Facades\Auth;
 
+
 class Matomo extends ComponentBase
 {
     public function componentDetails()
@@ -38,3 +39,5 @@ class Matomo extends ComponentBase
     }
 
 }
+
+?>

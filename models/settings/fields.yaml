@@ -1,6 +1,6 @@
 tabs:
   stretch: true
-  defaultTab: Site-wide Settings
+  defaultTab: Settings
   fields:
 
     matomoUsed:
@@ -12,18 +12,7 @@ tabs:
       label: Matomo Server
       span: auto
       type: text
-      comment: Matomo server used, e.g., matomo.org. Do not prefix by http:// or https//.
-      trigger:
-        action: hide
-        field: matomoUsed
-        condition: unchecked
-
-    serverHTTPS:
-      label: Secure Matomo Server
-      span: auto
-      type: switch
-      default: true
-      comment: Matomo server using https. Re-think security if it does not...
+      comment: Matomo server used, e.g., https://matomo.org. If neither https or http is specified, https is assumed.
       trigger:
         action: hide
         field: matomoUsed
@@ -90,11 +79,23 @@ tabs:
         field: matomoUsed
         condition: unchecked
 
+    php:
+      label: Include PHP class
+      span: auto
+      type: switch
+      default : false
+      comment: Include Matomo PHP classes for use in Twig. This feature has not yet been implemented.
+      trigger:
+        action: hide
+        field: matomoUsed
+        condition: unchecked
+      disabled: true
+
     description:
       span: full
       type: partial
       path: ~/plugins/mercator/matomo/partials/description.htm
-      tab: Details
+      tab: Reports
 
     about:
       span: full

@@ -1,182 +1,520 @@
-kpi_metric:
-  t: KPI Metric
-  d: Statistics on website usage (calls).
-  m: CoreVisualizations
-  a: singleMetricView
+widgetReferrersgetReferrerType:
+   t: "Acquisition - All Channels - Channel Types"
+   d: "This table contains information about the distribution of the channel types.Direct Entry: A visitor has entered the URL in their browser and started browsing on your website - they entered the website directly.Search Engines: A visitor was referred to your website by a search engine.  See the 'Search Engines & Keywords' report for more details.Websites: The visitor followed a link on another website that led to your site.  See the 'Websites' report for more details.Campaigns: Visitors that came to your website as the result of a campaign.  See the 'Campaigns' report for more details."
+   m: "Referrers"
+   a: "getReferrerType"
 
-visitor_bd:
-  t: Visitors - BOT Tracker Display
-  d: Statistical data about BOTs visiting the site.
-  m: BotTracker
-  a: getBotTrackerAnzeige
+widgetReferrersgetAll:
+   t: "Acquisition - All Channels - Referrers"
+   d: "This report shows all your Referrers in one unified report, listing all Websites, Search keywords and Campaigns used by your visitors to find your website."
+   m: "Referrers"
+   a: "getAll"
 
-visitor_ttb:
-  t: Visitors - Top 10 BOTs
-  d: Top 10 visiting BOTs.
-  m: BotTracker
-  a: getTop10
+widgetReferrersgetCampaignUrlBuilder:
+   t: "Acquisition - Campaign URL Builder - Campaign URL Builder"
+   d: ""
+   m: "Referrers"
+   a: "getCampaignUrlBuilder"
 
-visitor_rtvc:
-  t: Visitors - Real Time Visitor Count
-  d: A simple counter showing the number of visitors currently online.
-  m: Live
-  a: getSimpleLastVisitCount
+widgetReferrersgetCampaigns:
+   t: "Acquisition - Campaigns - Campaigns"
+   d: "This report shows which campaigns led visitors to your website."
+   m: "Referrers"
+   a: "getCampaigns"
 
-visitor_vowg:
-  t: Visitors - Visits Overview (with Graph)
-  d: A high-level summary of the visitor activities, including a graph showing the nunber of visitors over time as well as a verbal summary.
-  m: CoreHome
-  a: renderWidgetContainer
-  e: containerId=VisitOverviewWithGraph
+widgetReferrersgetSparklinesforceView1viewDataTablesparklines:
+   t: "Acquisition - Overview - Channel Type"
+   d: "The Acquisition Overview shows you the percentage of your traffic from all sources over a selected date range.You can also click on a specific channel type to display it within the evolution graph. This can help you discover which channels contribute the most traffic to your site as well as any potential patterns over time. For example, a certain channel may perform better on weekends."
+   m: "Referrers"
+   a: "getSparklines"
+   e: "&forceView=1&viewDataTable=sparklines"
 
-visitor_vo:
-  t: Visitors - Visits Overview
-  d: A high-level summary of the visitor activities, including a graph showing the nunber of visitors over time as well as a verbal summary.
-  m: VisitsSummary
-  a: get
-  e: viewDataTable=sparklines
+widgetReferrersgetEvolutionGraphforceView1viewDataTablegraphEvolutioncolumnsArray:
+   t: "Acquisition - Overview - Evolution Over The Period"
+   d: "The Acquisition Overview shows you the percentage of your traffic from all sources over a selected date range.You can also click on a specific channel type to display it within the evolution graph. This can help you discover which channels contribute the most traffic to your site as well as any potential patterns over time. For example, a certain channel may perform better on weekends."
+   m: "Referrers"
+   a: "getEvolutionGraph"
+   e: "&forceView=1&viewDataTable=graphEvolution&columns=Array"
 
-visitor_vot:
-  t: Visitors - Visits Over Time
-  d: Visitors to the website over time.
-  m: VisitsSummary
-  a: getEvolutionGraph
+widgetReferrersgetKeywords:
+   t: "Acquisition - Search Engines & Keywords - Keywords"
+   d: "This report shows which keywords users were searching for before they were referred to your website.  By clicking on a row in the table, you can see the distribution of search engines that were queried for the keyword.Note: This report lists most keywords as not defined, because most search engines do not send the exact keyword used on the search engine."
+   m: "Referrers"
+   a: "getKeywords"
 
-visitor_rtm:
-  t: Visitors - Realime Map
-  d: Map showing the users of the website in realime.
-  m: UserCountryMap
-  a: realtimeMap
+widgetReferrersgetSearchEngines:
+   t: "Acquisition - Search Engines & Keywords - Search Engines"
+   d: "This report shows which search engines referred users to your website.  By clicking on a row in the table, you can see what users were searching for using a specific search engine."
+   m: "Referrers"
+   a: "getSearchEngines"
 
-visitors_loctions_vm:
-  t: Visitors - Visitor Map
-  d: Map showing the visitors of the website.
-  m: UserCountryMap
-  a: visitorMap
+widgetReferrersgetSocials:
+   t: "Acquisition - Social Networks - Social Networks"
+   d: "In this table, you can see which websites referred visitors to your site.  By clicking on a row in the table, you can see which URLs the links to your website were on."
+   m: "Referrers"
+   a: "getSocials"
 
-visitors_loctions_continent:
-  t: Visitors - Visitor Continents
-  d: Vistors aggregated by continents.
-  m: UserCountry
-  a: getContinent
+widgetReferrersgetWebsites:
+   t: "Acquisition - Websites - Websites"
+   d: "In this table, you can see which websites referred visitors to your site.  By clicking on a row in the table, you can see which URLs the links to your website were on."
+   m: "Referrers"
+   a: "getWebsites"
 
-visitors_loctions_country:
-  t: Visitors - Visitor Countries
-  d: Vistors aggregated by countries.
-  m: UserCountry
-  a: getCountry
+widgetContents:
+   t: "Behaviour - Contents"
+   d: "Content tracking helps you determine the popularity of specific pieces of content on any page of your website or app. This section reports the number of impressions and interactions the various pieces of content on your site receive.Learn more in the Content Tracking guide."
+   m: "CoreHome"
+   a: "renderWidgetContainer"
+   e: "&containerId=Contents"
 
-visitors_loctions_region:
-  t: Visitors - Visitor Regions
-  d: istors aggregated by regions within countries.
-  m: UserCountry
-  a: getRegion
+widgetContentsgetContentNames:
+   t: "Behaviour - Contents - Actions: Content Name"
+   d: "This report shows the names of the content your visitors viewed and interacted with."
+   m: "Contents"
+   a: "getContentNames"
 
-visitors_loctions_city:
-  t: Visitors - Visitor Cities
-  d: istors aggregated by cities.
-  m: UserCountry
-  a: getCity
+widgetContentsgetContentPieces:
+   t: "Behaviour - Contents - Actions: Content Piece"
+   d: "This report shows the pieces of content your visitors viewed and interacted with."
+   m: "Contents"
+   a: "getContentPieces"
 
-visitor_bl:
-  t: Visitors - Browser Langauges
-  d: Language of the browesers used by the vistors (German, French, Chinese, ...).
-  m: UserLanguage
-  a: getLanguage
+widgetActionsgetDownloads:
+   t: "Behaviour - Downloads - Downloads"
+   d: "In this report, you can see which files your visitors have downloaded.  What Matomo counts as a download is the click on a download link. Whether the download was completed or not isn't known to Matomo."
+   m: "Actions"
+   a: "getDownloads"
 
-visitor_dow:
-  t: Visitors - Visits by Day of Week
-  d: Visitors aggregated by day of the week visited.
-  m: VisitTime
-  a: getByDayOfWeek
+widgetVisitFrequencygetforceView1viewDataTablesparklines:
+   t: "Behaviour - Engagement - Frequency Overview"
+   d: "This report shows general metrics like visits for returning visitors side by side with the same metrics for new visitors. Learn how returning visitors perform overall compared to new visitors."
+   m: "VisitFrequency"
+   a: "get"
+   e: "&forceView=1&viewDataTable=sparklines"
 
-visitor_todl:
-  t: Visitors - Visits by Time of Day (local)
-  d: Visitors aggregated by the hours visited. The lime is the local time of the Matomo server.
-  m: VisitTime
-  a: getVisitInformationPerLocalTime
+widgetVisitFrequencygetEvolutionGraphforceView1viewDataTablegraphEvolution:
+   t: "Behaviour - Engagement - Returning Visits Over Time"
+   d: "The Engagement section provides reports that help to quantify how many new and returning visitors you get. You can also review reports that break down the average time and number of pages per visit, as well as the number of times a visitor has been to your site and the most common number of days between visits.This can help you to optimise for frequency and high-interaction visits in addition to maximising your reach."
+   m: "VisitFrequency"
+   a: "getEvolutionGraph"
+   e: "&forceView=1&viewDataTable=graphEvolution"
 
-visitor_devices_db:
-  t: Visitors - Device Brand
-  d: Brand of the devices used by the visitors (Apple, Smasung, ...).
-  m: DevicesDetection
-  a: getBrand
+widgetVisitorInterestgetNumberOfVisitsByDaysSinceLast:
+   t: "Behaviour - Engagement - Visits By Days Since Last Visit"
+   d: "In this report, you can see how many visits were from visitors whose last visit was a certain number of days ago."
+   m: "VisitorInterest"
+   a: "getNumberOfVisitsByDaysSinceLast"
 
-visitor_devices_dm:
-  t: Visitors - Device Model
-  d: Model of the devices used by the visitors (iPhone, ...).
-  m: DevicesDetection
-  a: getModel
+widgetVisitorInterestgetNumberOfVisitsByVisitCount:
+   t: "Behaviour - Engagement - Visits By Visit Number"
+   d: "In this report, you can see the number of visits who were the Nth visit, ie. visitors who visited your website at least N times.Please note, that you can view the report in other ways than as a tag cloud. Use the controls at the bottom of the report to do so."
+   m: "VisitorInterest"
+   a: "getNumberOfVisitsByVisitCount"
 
-visitor_devices_dt:
-  t: Visitors - Device Type
-  d: Type of devices used by the visitors (desktop, tablet, phablet, camera, smart speaker, ...).
-  m: DevicesDetection
-  a: getType
+widgetVisitorInterestgetNumberOfVisitsPerPage:
+   t: "Behaviour - Engagement - Visits Per Number Of Pages"
+   d: "In this report, you can see how many visits involved a certain number of pageviews. Initially, the report is shown as a tag cloud, more common numbers of pages are displayed in a larger font.Please note, that you can view the report in other ways than as a tag cloud. Use the controls at the bottom of the report to do so."
+   m: "VisitorInterest"
+   a: "getNumberOfVisitsPerPage"
 
-visitor_devices_sr:
-    t: Visitors - Screen Resolution
-    d: Resolution of the devices used by the visitors (desktop, tablet, phablet, camera, smart speaker, ...).
-    m: Resolution
-    a: getResolution
+widgetVisitorInterestgetNumberOfVisitsPerVisitDuration:
+   t: "Behaviour - Engagement - Visits Per Visit Duration"
+   d: "In this report, you can see how many visits had a certain total duration. Initially, the report is shown as a tag cloud, more common durations are displayed in a larger font.Please note, that you can view the report in other ways than as a tag cloud. Use the controls at the bottom of the report to do so."
+   m: "VisitorInterest"
+   a: "getNumberOfVisitsPerVisitDuration"
 
-behaviour_pages_url:
-  t: Behaviour - Pages (URL)
-  d: Statistical data per website page (URL).
-  m: Actions
-  a: getPageUrls
+widgetActionsgetEntryPageTitles:
+   t: "Behaviour - Entry Pages - Entry Page Titles"
+   d: "This report contains information about the titles of entry pages that were used during the specified period. Use the plus and minus icons on the left to navigate."
+   m: "Actions"
+   a: "getEntryPageTitles"
 
-behaviour_pages_entry_url:
-  t: Behaviour - Entry Pages (URL)
-  d: Entrance and bounce summary per website page (URL).
-  m: Actions
-  a: getEntryPageUrls
+widgetActionsgetEntryPageUrls:
+   t: "Behaviour - Entry Pages - Entry Pages"
+   d: "This report contains information about the entry pages that were used during the specified period. An entry page is the first page that a user views during their visit.  The entry URLs are displayed as a folder structure.Use the plus and minus icons on the left to navigate."
+   m: "Actions"
+   a: "getEntryPageUrls"
 
-behaviour_pages_exit_url:
-  t: Behaviour - Exit Pages (URL)
-  d: Exit summary per website page (URL).
-  m: Actions
-  a: getExitPageUrls
+widgetEvents:
+   t: "Behaviour - Events"
+   d: "The Events section offers reports on the custom events associated with your site. Events typically require custom configuration. Once configured you can review reports broken down by category, action and name.Learn more about event tracking here."
+   m: "CoreHome"
+   a: "renderWidgetContainer"
+   e: "&containerId=Events"
 
-behaviour_pages_title:
-  t: Behaviour - Pages (Title)
-  d: Statistical data per website page (by page title).
-  m: Actions
-  a: getPageTitles
+widgetEventsgetActionsecondaryDimensioneventName:
+   t: "Behaviour - Events - Actions: Event Actions"
+   d: "This report shows you the number of times each event action occurred. You can view the event categories and names that were tracked along with each event action in the row's subtable. You can change which is shown by changing the secondary dimension with the link at the bottom of the report."
+   m: "Events"
+   a: "getAction"
+   e: "&secondaryDimension=eventName"
 
-behaviour_pages_entry_title:
-  t: Behaviour - Entry Pages (Title)
-  d: Entrance and bounce summary per website page (by page title).
-  m: Actions
-  a: getEntryPageTitles
+widgetEventsgetCategorysecondaryDimensioneventAction:
+   t: "Behaviour - Events - Actions: Event Categories"
+   d: "This report shows the categories of each tracked event and how many times they occurred. You can view the event actions and names that were tracked along with each event category in each row's subtable. You can change which is shown by changing the secondary dimension with the link at the bottom of the report."
+   m: "Events"
+   a: "getCategory"
+   e: "&secondaryDimension=eventAction"
 
-behaviour_pages_exit_title:
-  t: Behaviour - Exit Pages (Title)
-  d: Exit summary per website page (by page title).
-  m: Actions
-  a: getExitPageTitles
+widgetEventsgetNamesecondaryDimensioneventAction:
+   t: "Behaviour - Events - Actions: Event Names"
+   d: "This report shows you the names associated with each tracked event and how many times they occurred. You can view the event actions and categories that were tracked along with each event name in each row's subtable. You can change which is shown by changing the secondary dimension with the link at the bottom of the report."
+   m: "Events"
+   a: "getName"
+   e: "&secondaryDimension=eventAction"
 
-behaviour_transition:
-  t: Behaviour - Transitions
-  d: User tranistions from one page to another (using a thunnel view).
-  m: Transitions
-  a: getTransitions
+widgetActionsgetExitPageTitles:
+   t: "Behaviour - Exit Pages - Exit Page Titles"
+   d: "This report contains information about the titles of exit pages that occurred during the specified period. Use the plus and minus icons on the left to navigate."
+   m: "Actions"
+   a: "getExitPageTitles"
 
-behaviour_performancemetrics:
-  t: Behaviour - Performance Metrics
-  d: Evolution of network, server and transfer times.
-  m: PagePerformance
-  a: getEvolutionGraph
-  e: graphStackedBarEvolution
+widgetActionsgetExitPageUrls:
+   t: "Behaviour - Exit Pages - Exit Pages"
+   d: "This report contains information about the exit pages that occurred during the specified period. An exit page is the last page that a user views during their visit.  The exit URLs are displayed as a folder structure.Use the plus and minus icons on the left to navigate."
+   m: "Actions"
+   a: "getExitPageUrls"
 
-acquisition_searchengines:
-  t: Acquisition - Search Engines
-  d: Statistical information regarding referal by search engines.
-  m: Referrers
-  a: getSearchEngines
+widgetActionsgetOutlinks:
+   t: "Behaviour - Outlinks - Outlinks"
+   d: "This report shows a hierarchical list of outlink URLs that were clicked by your visitors. An outlink is a link that leads the visitor away from your website (to another domain).Use the plus and minus icons on the left to navigate."
+   m: "Actions"
+   a: "getOutlinks"
 
-acquisition_socialnetworks:
-  t: Acquisition - Social Networks
-  d: Statistical information regarding referal by social media networks.
-  m: Referrers
-  a: getSocials
+widgetActionsgetPageTitles:
+   t: "Behaviour - Page Titles - Page Titles"
+   d: "This report contains information about the titles of the pages that have been visited.  The page title is the HTML  Tag that most browsers show in their window title."
+   m: "Actions"
+   a: "getPageTitles"
+
+widgetActionsgetPageUrls:
+   t: "Behaviour - Pages - Pages"
+   d: "This report contains information about the page URLs that have been visited.  The table is organized hierarchically, the URLs are displayed as a folder structure.Use the plus and minus icons on the left to navigate."
+   m: "Actions"
+   a: "getPageUrls"
+
+widgetPagePerformancegetforceView1viewDataTablesparklines:
+   t: "Behaviour - Performance"
+   d: "This report provides an overview of how fast your webpages become visible to your visitors. This includes both how long it takes for browsers to download your webpages and how long it takes for browsers to display them."
+   m: "PagePerformance"
+   a: "get"
+   e: "&forceView=1&viewDataTable=sparklines"
+
+widgetPagePerformancegetEvolutionGraphforceView1viewDataTablegraphStackedBarEvolution:
+   t: "Behaviour - Performance - Evolution Of Page Performance Metrics"
+   d: "The Performance section can help you analyse how fast your website or app is performing on the whole and help discover whether you have specific pages that significantly deviate from your averages.You can also find reports showing exactly how long each page of your website takes to load and what is contributing to their loading time."
+   m: "PagePerformance"
+   a: "getEvolutionGraph"
+   e: "&forceView=1&viewDataTable=graphStackedBarEvolution"
+
+widgetActionsgetPageTitlesforceView1viewDataTabletablePerformanceColumnsperformance1:
+   t: "Behaviour - Performance - Page Titles"
+   d: "This report contains information about the titles of the pages that have been visited.  The page title is the HTML  Tag that most browsers show in their window title."
+   m: "Actions"
+   a: "getPageTitles"
+   e: "&forceView=1&viewDataTable=tablePerformanceColumns&performance=1"
+
+widgetActionsgetPageUrlsforceView1viewDataTabletablePerformanceColumnsperformance1:
+   t: "Behaviour - Performance - Page URLs"
+   d: "This report contains information about the page URLs that have been visited.  The table is organized hierarchically, the URLs are displayed as a folder structure.Use the plus and minus icons on the left to navigate."
+   m: "Actions"
+   a: "getPageUrls"
+   e: "&forceView=1&viewDataTable=tablePerformanceColumns&performance=1"
+
+widgetActionsgetPageTitlesFollowingSiteSearch:
+   t: "Behaviour - Site Search - Page Titles Following A Site Search"
+   d: "When visitors search on your website, they are looking for a particular page, content, product, or service. This report lists the pages that were clicked the most after an internal search. In other words, the list of pages the most searched for by visitors already on your website.Use the plus and minus icons on the left to navigate."
+   m: "Actions"
+   a: "getPageTitlesFollowingSiteSearch"
+
+widgetActionsgetPageUrlsFollowingSiteSearch:
+   t: "Behaviour - Site Search - Pages Following A Site Search"
+   d: "When visitors search on your website, they are looking for a particular page, content, product, or service. This report lists the pages that were clicked the most after an internal search. In other words, the list of pages the most searched for by visitors already on your website.Use the plus and minus icons on the left to navigate."
+   m: "Actions"
+   a: "getPageUrlsFollowingSiteSearch"
+
+widgetActionsgetSiteSearchCategories:
+   t: "Behaviour - Site Search - Search Categories"
+   d: "This report lists the Categories that visitors selected when they made a Search on your website.For example, Ecommerce websites typically have a 'Category' selector so that visitors can restrict their searches to all products in a specific Category."
+   m: "Actions"
+   a: "getSiteSearchCategories"
+
+widgetActionsgetSiteSearchNoResultKeywords:
+   t: "Behaviour - Site Search - Search Keywords With No Results"
+   d: "Tracking searches that visitors make on your website is a very effective way to learn more about what your audience is looking for, it can help find ideas for new content, new Ecommerce products that potential customers might be searching for, and generally improve the visitors' experience on your website.This report lists the Search Keywords that did not return any Search result: maybe the search engine algorithm can be improved, or maybe your visitors are looking for content that is not (yet) on your website?"
+   m: "Actions"
+   a: "getSiteSearchNoResultKeywords"
+
+widgetActionsgetSiteSearchKeywords:
+   t: "Behaviour - Site Search - Site Search Keywords"
+   d: "This report lists the Search Keywords that visitors searched for on your internal Search Engine.Tracking searches that visitors make on your website is a very effective way to learn more about what your audience is looking for, it can help find ideas for new content, new Ecommerce products that potential customers might be searching for, and generally improve the visitors' experience on your website."
+   m: "Actions"
+   a: "getSiteSearchKeywords"
+
+widgetTransitionsgetTransitions:
+   t: "Behaviour - Transitions - Transitions"
+   d: "Transitions gives you a report that shows the things your visitors did directly before and after viewing a certain page. This page will explain how to access, understand, and use the powerful Transitions report.More Details"
+   m: "Transitions"
+   a: "getTransitions"
+
+widgetGoalsaddNewGoalidGoal:
+   t: "Goals - Add A New Goal - Add A New Goal"
+   d: ""
+   m: "Goals"
+   a: "addNewGoal"
+   e: "&idGoal="
+
+widgetGoals:
+   t: "Goals - Overview - Conversions Overview By Type Of Visit"
+   d: "The Goals Overview reports on the performance of the goals defined for your website. You can access your goal’s conversion percentages, amount of revenue generated and full reports for each.Click on an individual metric within the sparkline chart to focus on it within the full-sized evolution graph."
+   m: "CoreHome"
+   a: "renderWidgetContainer"
+   e: "&containerId=Goals"
+
+widgetGoalsOverview:
+   t: "Goals - Overview - Overview"
+   d: "The Goals Overview reports on the performance of the goals defined for your website. You can access your goal’s conversion percentages, amount of revenue generated and full reports for each.Click on an individual metric within the sparkline chart to focus on it within the full-sized evolution graph."
+   m: "CoreHome"
+   a: "renderWidgetContainer"
+   e: "&containerId=GoalsOverview"
+
+widgetInsightsgetInsightsOverview:
+   t: "Insights - Insights Overview"
+   d: ""
+   m: "Insights"
+   a: "getInsightsOverview"
+
+widgetInsightsgetOverallMoversAndShakers:
+   t: "Insights - Movers And Shakers"
+   d: ""
+   m: "Insights"
+   a: "getOverallMoversAndShakers"
+
+widgetCoreVisualizationssingleMetricViewcolumn:
+   t: "KPI Metric - KPI Metric"
+   d: ""
+   m: "CoreVisualizations"
+   a: "singleMetricView"
+   e: "&column="
+
+widgetSEOgetRank:
+   t: "SEO - SEO Rankings"
+   d: ""
+   m: "SEO"
+   a: "getRank"
+
+widgetBotTrackergetBotTracker:
+   t: "Visitors - BotTracker - BotTracker"
+   d: ""
+   m: "BotTracker"
+   a: "getBotTracker"
+
+widgetBotTrackergetTop10:
+   t: "Visitors - BotTracker - Top 10 Bots"
+   d: ""
+   m: "BotTracker"
+   a: "getTop10"
+
+widgetBotTrackergetBotTrackerAnzeige:
+   t: "Visitors - BotTracker Display"
+   d: "The Visitors pages tell you things about who your visitors are. Things like where your visitors came from, what devices and browsers they're using and when they generally visit your website. Understand, in the aggregate, who your audience is, and look for outliers to see how your audience could grow.In addition to general information about your visitors, you can also use the Visits Log to see what occurred in every individual visit."
+   m: "BotTracker"
+   a: "getBotTrackerAnzeige"
+
+widgetIPtoCompanygetCompanies:
+   t: "Visitors - Companies - Companies"
+   d: ""
+   m: "IPtoCompany"
+   a: "getCompanies"
+
+widgetDevicesDetectiongetBrand:
+   t: "Visitors - Devices - Device Brand"
+   d: "This report shows the brands / manufacturers of the devices your visitors were using. In most cases this information is only available for non-desktop devices."
+   m: "DevicesDetection"
+   a: "getBrand"
+
+widgetDevicesDetectiongetModel:
+   t: "Visitors - Devices - Device Model"
+   d: "This report shows the devices your visitors are using. Each model is displayed combined with the device brand as some model names are used by multiple brands."
+   m: "DevicesDetection"
+   a: "getModel"
+
+widgetDevicesDetectiongetType:
+   t: "Visitors - Devices - Device Type"
+   d: "This report shows the types of devices your visitors were using. This report will always show all device types Matomo is able to detect, even if there were no visits with a specific type."
+   m: "DevicesDetection"
+   a: "getType"
+
+widgetResolutiongetResolution:
+   t: "Visitors - Devices - Screen Resolution"
+   d: "This report shows the screen resolutions your visitors used when viewing your website."
+   m: "Resolution"
+   a: "getResolution"
+
+widgetContinent:
+   t: "Visitors - Locations"
+   d: "The Locations section is the best way to find out where people are when they visit your site. It reveals the countries, continents, regions, cities that you visitors come from, in tables and map form. Additionally, you can see what language their browser is set to, helping identify international visitors in alternative locations."
+   m: "CoreHome"
+   a: "renderWidgetContainer"
+   e: "&containerId=Continent"
+
+widgetUserLanguagegetLanguage:
+   t: "Visitors - Locations - Browser Language"
+   d: "This report shows which language the visitor's browsers are using. (e.g. 'English')"
+   m: "UserLanguage"
+   a: "getLanguage"
+
+widgetUserCountrygetCity:
+   t: "Visitors - Locations - City"
+   d: "This report shows the cities your visitors were in when they accessed your website.In order to see data for this report, you must setup GeoIP in the Geolocation admin tab. The commercial Maxmind GeoIP databases are more accurate than the free ones. To see how accurate they are, click here."
+   m: "UserCountry"
+   a: "getCity"
+
+widgetUserCountrygetContinent:
+   t: "Visitors - Locations - Continent"
+   d: "This report shows which continent your visitors were in when they accessed your website."
+   m: "UserCountry"
+   a: "getContinent"
+
+widgetUserCountrygetCountry:
+   t: "Visitors - Locations - Country"
+   d: "This report shows which country your visitors were in when they accessed your website."
+   m: "UserCountry"
+   a: "getCountry"
+
+widgetUserLanguagegetLanguageCode:
+   t: "Visitors - Locations - Language Code"
+   d: "This report shows which exact language code the visitor's browsers is set to. (e.g. 'German - Austria (de-at)')"
+   m: "UserLanguage"
+   a: "getLanguageCode"
+
+widgetUserCountrygetRegion:
+   t: "Visitors - Locations - Region"
+   d: "This report shows which region your visitors were in when they accessed your website.In order to see data for this report, you must setup GeoIP in the Geolocation admin tab. The commercial Maxmind GeoIP databases are more accurate than the free ones. To see how accurate they are, click here."
+   m: "UserCountry"
+   a: "getRegion"
+
+widgetUserCountryMapvisitorMap:
+   t: "Visitors - Locations - Visitor Map"
+   d: "The Locations section is the best way to find out where people are when they visit your site. It reveals the countries, continents, regions, cities that you visitors come from, in tables and map form. Additionally, you can see what language their browser is set to, helping identify international visitors in alternative locations."
+   m: "UserCountryMap"
+   a: "visitorMap"
+
+widgetVisitsSummarygetEvolutionGraphforceView1viewDataTablegraphEvolution:
+   t: "Visitors - Overview - Visits Over Time"
+   d: "The Visitors Overview helps you understand the popularity of your site. It does this by providing charts that show how many visits your site is receiving over a selected period and the average level of engagement for key features, such as searches and downloads."
+   m: "VisitsSummary"
+   a: "getEvolutionGraph"
+   e: "&forceView=1&viewDataTable=graphEvolution"
+
+widgetVisitsSummarygetforceView1viewDataTablesparklines:
+   t: "Visitors - Overview - Visits Overview"
+   d: "This report provides a very general overview of how your visitors behave."
+   m: "VisitsSummary"
+   a: "get"
+   e: "&forceView=1&viewDataTable=sparklines"
+
+widgetLivegetSimpleLastVisitCount:
+   t: "Visitors - Real Time Visitor Count"
+   d: "The Visitors pages tell you things about who your visitors are. Things like where your visitors came from, what devices and browsers they're using and when they generally visit your website. Understand, in the aggregate, who your audience is, and look for outliers to see how your audience could grow.In addition to general information about your visitors, you can also use the Visits Log to see what occurred in every individual visit."
+   m: "Live"
+   a: "getSimpleLastVisitCount"
+
+widgetLivewidget:
+   t: "Visitors - Real-time - Visits In Real-time"
+   d: "The Visits in Real-time report shows the real-time flow of visits to your website. It includes a real-time counter of your visits and page views in the last 24 hours and the previous 30 minutes.This report refreshes every 5 seconds and displays new visits (or existing visitors that view a new page) at the top of the list with a fade-in effect."
+   m: "Live"
+   a: "widget"
+
+widgetUserCountryMaprealtimeMap:
+   t: "Visitors - Real-time Map - Real-time Map"
+   d: "The Real-time Map shows the location of visitors on your site within the last 30 minutes. Large orange bubbles represent more recent visits, while smaller grey bubbles represent older visits. This data refreshes every five seconds, and new visitors appear with a flashing effect."
+   m: "UserCountryMap"
+   a: "realtimeMap"
+
+widgetDevicesDetectiongetBrowserEngines:
+   t: "Visitors - Software - Browser Engines"
+   d: "This report shows your visitors' browsers broken down into browser engines.  The most important information for web developers is what kind of rendering engine their visitors are using. The labels contain the names of the engines followed by the most common browser using that engine in brackets."
+   m: "DevicesDetection"
+   a: "getBrowserEngines"
+
+widgetDevicePluginsgetPlugin:
+   t: "Visitors - Software - Browser Plugins"
+   d: "This report shows which browser plugins your visitors had enabled. This information might be important for choosing the right way to deliver your content."
+   m: "DevicePlugins"
+   a: "getPlugin"
+
+widgetDevicesDetectiongetBrowserVersions:
+   t: "Visitors - Software - Browser Version"
+   d: "This report contains information about what kind of browser your visitors were using. Each browser version is listed separately."
+   m: "DevicesDetection"
+   a: "getBrowserVersions"
+
+widgetDevicesDetectiongetBrowsers:
+   t: "Visitors - Software - Browsers"
+   d: "This report contains information about what kind of browser your visitors were using."
+   m: "DevicesDetection"
+   a: "getBrowsers"
+
+widgetResolutiongetConfiguration:
+   t: "Visitors - Software - Configurations"
+   d: "This report shows the most common overall configurations that your visitors had. A configuration is the combination of an operating system, a browser type and a screen resolution."
+   m: "Resolution"
+   a: "getConfiguration"
+
+widgetDevicesDetectiongetOsFamilies:
+   t: "Visitors - Software - Operating System Families"
+   d: "This report shows you the operating systems your visitors are using grouped by operating system family. An operating system family consists of different versions or distributions."
+   m: "DevicesDetection"
+   a: "getOsFamilies"
+
+widgetDevicesDetectiongetOsVersions:
+   t: "Visitors - Software - Operating System Versions"
+   d: "This report shows you the operating systems your visitors are using. Each version and distribution is shown separately."
+   m: "DevicesDetection"
+   a: "getOsVersions"
+
+widgetVisitTimegetByDayOfWeek:
+   t: "Visitors - Times - Visits By Day Of Week"
+   d: "This graph shows the number of visits your website received on each day of the week."
+   m: "VisitTime"
+   a: "getByDayOfWeek"
+
+widgetVisitTimegetVisitInformationPerLocalTime:
+   t: "Visitors - Times - Visits Per Local Time"
+   d: "This graph shows what time it was in the  visitors' time zones  during their visits."
+   m: "VisitTime"
+   a: "getVisitInformationPerLocalTime"
+
+widgetVisitTimegetVisitInformationPerServerTime:
+   t: "Visitors - Times - Visits Per Server Time"
+   d: "This graph shows what time it was in the  server's time zone  during the visits."
+   m: "VisitTime"
+   a: "getVisitInformationPerServerTime"
+
+widgetUserIdgetUsers:
+   t: "Visitors - User IDs - User IDs"
+   d: "This report shows visits and other general metrics for every individual User ID."
+   m: "UserId"
+   a: "getUsers"
+
+widgetLivegetVisitorProfilePopup:
+   t: "Visitors - Visitor Profile"
+   d: "The Visitors pages tell you things about who your visitors are. Things like where your visitors came from, what devices and browsers they're using and when they generally visit your website. Understand, in the aggregate, who your audience is, and look for outliers to see how your audience could grow.In addition to general information about your visitors, you can also use the Visits Log to see what occurred in every individual visit."
+   m: "Live"
+   a: "getVisitorProfilePopup"
+
+widgetLivegetLastVisitsDetailsforceView1viewDataTableVisitorLogsmall1:
+   t: "Visitors - Visits Log - Visits Log"
+   d: "The Visits Log shows you every visit your website receives in detail. You can see what actions each visitor has taken, how they got to your site, a bit about who they are, and more (while still complying with your local privacy regulations).While other reports in Matomo show how your visitors behave at an aggregate level, the Visits Log provides granular detail. You can also use segments to narrow it down to specific types of visits to understand your visitors better.Learn more in the Visits Log guide."
+   m: "Live"
+   a: "getLastVisitsDetails"
+   e: "&forceView=1&viewDataTable=VisitorLog&small=1"
+
+widgetVisitOverviewWithGraph:
+   t: "Visitors - Visits Overview (with Graph)"
+   d: "The Visitors pages tell you things about who your visitors are. Things like where your visitors came from, what devices and browsers they're using and when they generally visit your website. Understand, in the aggregate, who your audience is, and look for outliers to see how your audience could grow.In addition to general information about your visitors, you can also use the Visits Log to see what occurred in every individual visit."
+   m: "CoreHome"
+   a: "renderWidgetContainer"
+   e: "&containerId=VisitOverviewWithGraph"
+

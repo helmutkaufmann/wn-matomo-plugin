@@ -7,4 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'MatomoTracker' => $vendorDir . '/matomo/matomo-php-tracker/MatomoTracker.php',
+    'PiwikTracker' => $vendorDir . '/matomo/matomo-php-tracker/PiwikTracker.php',
 );
