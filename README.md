@@ -83,7 +83,7 @@ The *Reports* tab in the backend provides a list of the available reports.
 
 ## First Aid
 
-If you cannot select *Matomo Widget* or *Reports* whhen adding a widget,
+If you cannot select *Matomo Widget* or *Matomo Dashboard* when adding a widget,
 review the configuration settings in the backend. In particular ensure that
 *Winter Dashboard Widgets* is enabled.
 
