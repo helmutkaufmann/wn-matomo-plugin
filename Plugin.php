@@ -63,6 +63,45 @@ class Plugin extends PluginBase
         $matomoReports .= "";
         $settings = Settings::instance();
         $settings->mercator_matomo_reports = $matomoReports;
+
+
+        switch (substr(Settings::get('server'), 0, 5)) {
+          case "https":
+            $settings->matomoServerHTTPS = "https";
+            $settings->matomoServer = (parse_url(Settings::get('server'), PHP_URL_HOST) ? parse_url(Settings::get('server'), PHP_URL_HOST) : "Matomo server not defined");
+            break;
+          case "http:":
+            $settings->matomoServerHTTPS = "http";
+            $settings->matomoServer = (parse_url(Settings::get('server'), PHP_URL_HOST) ? parse_url(Settings::get('server'), PHP_URL_HOST) : "Matomo server not defined");
+            break;
+          default:
+            $settings->matomoServerHTTPS = "https";
+            $settings->matomoServer = (Settings::get('server') ? Settings::get('server') : "Matomo server not defined");
+
+        }
+        $settings->matomoAuthorization = Settings::get('authorization');
+        $settings->matomoSite = Settings::get('site');
+
+        /*
+        $errorURL = $settings->matomoServerHTTPS . "://" . $settings->matomoServer . "/index.php?format=json&module=CoreAdminHome&action=getTrackingFailures&period=day&date=yesterday&idSite=" . $settings->matomoSite . "&auth=_token" . $settings->matomoAuthorization  ;
+
+        $ch = curl_init();
+        // Will return the response, if false it print the response
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // Set the url
+        curl_setopt($ch, CURLOPT_URL, $errorURL);
+        // Execute
+        $result=curl_exec($ch);
+        // Closing
+        curl_close($ch);
+        // $errors=json_decode($result, true);
+        $errors=Array($result);
+        $settings->errors = $result . "\n\n" . $errorURL;
+
+        */
+
+        $settings->errors = "Be back in the future - this feature has not yet been implemented.";
+
     }
 
     /**

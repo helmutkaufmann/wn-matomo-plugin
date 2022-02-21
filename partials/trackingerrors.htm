@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+<h4>Tracking Errors</h4>
+<p class="help-block"></p>
+
+
+<? use Mercator\Matomo\Models\Settings; $settings = Settings::instance(); ?>
+
+<div >
+  <?= $settings->errors; ?>
+</div>

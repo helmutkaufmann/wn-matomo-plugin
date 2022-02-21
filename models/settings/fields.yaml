@@ -103,3 +103,9 @@ tabs:
       type: partial
       path: ~/plugins/mercator/matomo/partials/about.htm
       tab: About
+
+    trackingerrors:
+      span: full
+      type: partial
+      path: ~/plugins/mercator/matomo/partials/trackingerrors.htm
+      tab: Tracking Errors
