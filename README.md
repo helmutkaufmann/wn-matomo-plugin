@@ -87,10 +87,20 @@ If you cannot select *Matomo Widget* or *Reports* whhen adding a widget,
 review the configuration settings in the backend. In particular ensure that
 *Winter Dashboard Widgets* is enabled.
 
+Should you see an error message on your Winter Dashboard
+- review the configuration settings in the backend
+- make sure the Matomo users, whose Auth Token you are using, is *only* having
+*Read* privileges.
+
 Should you see empty widgets on your Winter Dashboard
 - review the configuration settings in the backend
 - review the configuration settings of the widget, in particular that you
 have indeed selected a report and that the representation makes sense
+
+If your Matomo widgets do not resize (and parts of the content is hidden)
+- set the width of the widget in the widget configuration to another value, e.g.,
+6 columns instead of 12. You can set it to its original value afterwards
+- remove and re-add the widget
 
 ## Thank You
 I would like to thank the guys from [WinterCMS](https://wintercms.com) for their
