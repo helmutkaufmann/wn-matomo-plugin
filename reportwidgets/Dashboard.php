@@ -50,6 +50,7 @@ class Dashboard extends ReportWidgetBase
      */
     protected function loadAssets()
     {
+      $this->addJs('/plugins/mercator/matomo/assets/javascript/iFrameResizer.js');
     }
 
     /**

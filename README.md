@@ -49,8 +49,11 @@ To get Matomo Analytics running,
 - identify the analytics server you intend to use (e.g., matomo.org).
 - in the Matoma backend set your CMS server up for tracking and note down the
 server ID
-- again in the in the Matoma backend generate a security token (so-called "Auth Token")
+- again in the in the Matoma backend generate a security token (so-called *Auth Token*).
+Note that the *Auth Token* must be created under user who does **not** have
+Admin access to
 - enter the above three items in Winter CMS's backend section of the plugin
+- potentially disable any adblocker you are using
 
 ### Tracking
 To start tracking your visitors go to the CMS section of Winter CMS and drag-drop
@@ -65,8 +68,7 @@ so you might have to wait a few minutes to see first results.
 ###  Reporting
 Goto Winter's Dashbaord and add a new widget. Select *Matomo Widget* as the
 widget type in Winter's dashboard when adding a new widget.
-Then, select the actual report type. Please see the Matomo backend for a description
-(reports are termed very similarly). For each report added, you can change
+Then, select the actual report type. For each report added, you can change
 the reporting period (7/30/360 days) as well as the way the report is
 rendered (e.g., a pie chart). It is also possible to export the data of
 an individual report.
