@@ -122,7 +122,6 @@ class Individual extends ReportWidgetBase
      */
     protected function loadAssets()
     {
-      // $this->addJs('/plugins/mercator/matomo/assets/javascript/jQuery.js');
       $this->addJs('/plugins/mercator/matomo/assets/javascript/iFrameResizer.js');
     }
 

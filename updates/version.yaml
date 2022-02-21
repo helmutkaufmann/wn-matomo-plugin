@@ -1,4 +1,5 @@
-0.9.001: First beta version of Matomo Analytics
+0.9.001: First beta version of Matomo Analytics.
 0.9.008: Added large nunber of additional reports. Preparing for PHP Tracking API inclusion.
-0.9.009: Bug fix
-0.9.010: Added README screenshots
+0.9.009: Bug fix.
+0.9.010: Added README screenshots.
+0.9.011: Updated README with further instructions. Added missing jResizer asset to Dashboard widget.
