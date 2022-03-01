@@ -13,8 +13,8 @@
 
 <script>
   iFrameResize({
-  	log                     : false,                  // Enable console logging
-  	resizedCallback         : function(messageData){ // Callback fn when resize is received
+  	log                     : false,
+  	resizedCallback         : function(messageData){ 
       $(window).trigger('resize');
   	},
     tolerance: 10,

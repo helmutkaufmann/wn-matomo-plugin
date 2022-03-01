@@ -30,6 +30,13 @@ tabs:
         field: matomoUsed
         condition: unchecked
 
+    excluded:
+      label: URLs excuded from Matomo tracking
+      span: auto
+      type: text
+      comment: URLs to be excldued from tracking by Matomo, \/admin|\/private to exclude /admin and /private. Note that the individual exclusions, such as 'admin' match all URLs they are contained in at any place.
+      default: \/404
+
     authorization:
       label: Matomo Auth Token
       span: auto

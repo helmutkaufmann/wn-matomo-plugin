@@ -13,6 +13,7 @@ use BackendAuth;
 use Event;
 use System\Classes\PluginBase;
 use Mercator\Matomo\Models\Settings;
+use Mercator\Matomo\Components\MatomoTrackerAPI;
 use Yaml;
 
 /**
@@ -52,6 +53,12 @@ class Plugin extends PluginBase
      */
     public function boot() {
 
+        $settings = Settings::instance();
+
+        //
+        // Compile list of available Matomo reports
+        // and make them available as settings
+        //
         $availableReports = Yaml::parseFile(plugins_path(). "/mercator/matomo/reports.yaml");
         $matomoReports="";
         foreach($availableReports as $acronym => $details) {
@@ -61,10 +68,11 @@ class Plugin extends PluginBase
             // $matomoReports .= ("<p>" . $details['t'] . "</b><br>". (array_key_exists("d", $details) ? $details['d'] : "") . "</p>");
         };
         $matomoReports .= "";
-        $settings = Settings::instance();
         $settings->mercator_matomo_reports = $matomoReports;
 
-
+        //
+        // Provide Matomo settings for use in template
+        //
         switch (substr(Settings::get('server'), 0, 5)) {
           case "https":
             $settings->matomoServerHTTPS = "https";
@@ -82,24 +90,11 @@ class Plugin extends PluginBase
         $settings->matomoAuthorization = Settings::get('authorization');
         $settings->matomoSite = Settings::get('site');
 
-        /*
-        $errorURL = $settings->matomoServerHTTPS . "://" . $settings->matomoServer . "/index.php?format=json&module=CoreAdminHome&action=getTrackingFailures&period=day&date=yesterday&idSite=" . $settings->matomoSite . "&auth=_token" . $settings->matomoAuthorization  ;
-
-        $ch = curl_init();
-        // Will return the response, if false it print the response
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        // Set the url
-        curl_setopt($ch, CURLOPT_URL, $errorURL);
-        // Execute
-        $result=curl_exec($ch);
-        // Closing
-        curl_close($ch);
-        // $errors=json_decode($result, true);
-        $errors=Array($result);
-        $settings->errors = $result . "\n\n" . $errorURL;
-
-        */
-
+        //
+        // Provide teh current list of tracking errors
+        // The CoreHomeAdmin report does currently not work, so just provide an error message for teh time being
+        //
+        //
         $settings->errors = "Be back in the future - this feature has not yet been implemented.";
 
     }
@@ -111,6 +106,9 @@ class Plugin extends PluginBase
      */
     public function registerComponents() {
 
+        //
+        // Only expose the Matomo Tracking API if it is needed
+        //
         if (Settings::get("phpTracking", false))
           return [
               'Mercator\Matomo\Components\Matomo' => 'Matomo',
@@ -165,9 +163,4 @@ class Plugin extends PluginBase
       else
         return [];
     }
-
-    public function onLoad() {
-      $this->addJs('/plugins/mercator/matomo/assets/javascript/jResizer.js');
-    }
-
 }

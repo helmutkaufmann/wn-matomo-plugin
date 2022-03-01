@@ -28,6 +28,7 @@ class Matomo extends ComponentBase
 
       $this->page['matomoServer'] = Settings::get("server", "");
       $this->page['matomoSite'] = Settings::get("site", "");
+      $this->page['matomoExcluded'] = Settings::get("excluded", false);
 
       if (BackendAuth::getUser() && !Settings::get('backendTracking')) {
     		$this->page['matomoTracking'] = false;

@@ -12,7 +12,7 @@ class Dashboard extends ReportWidgetBase
     /**
      * @var string The default alias to use for this widget
      */
-    protected $defaultAlias = 'DashboardReportWidget';
+    protected $defaultAlias = 'MatomoDashboardWidget';
 
     /**
      * Defines the widget's properties
@@ -26,15 +26,16 @@ class Dashboard extends ReportWidgetBase
                 'default'  => 'Matomo Dashboard',
                 'type'     => 'string',
                 'required' => '1',
-                'description' => 'The name of the dashboard.'
+                'description' => 'The title of the widget displayed.'
              ],
              'period' => [
-                 'title' => 'Period',
-             		'options'     => [
+                  'title' => 'Period',
+             		  'options'     => [
+                    'last1' => 'Today',
                			'last7' => 'Last 7 Days',
                			'last30' => 'Last 30 Days',
                			'last360' => 'Last 360 Days',
-             		],
+             		 ],
                  'default' => 'last30',
                  'required' => '1',
                  'type' => 'dropdown',
@@ -48,9 +49,13 @@ class Dashboard extends ReportWidgetBase
      * to register new assets to include on the page.
      * @return void
      */
+     //
+     // Provide iFrame resizing through iFrameResizer
+     // This can be downloaded from https://github.com/davidjbradshaw/iframe-resizer/tree/master/js
+     //
     protected function loadAssets()
     {
-      $this->addJs('/plugins/mercator/matomo/assets/javascript/iFrameResizer.js');
+      $this->addJs('/plugins/mercator/matomo/assets/js/iFrameResizer.js');
     }
 
     /**

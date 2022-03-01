@@ -17,7 +17,7 @@ class Individual extends ReportWidgetBase
     /**
      * @var string The default alias to use for this widget
      */
-    protected $defaultAlias = 'MatomoIndividualReportWidget';
+    protected $defaultAlias = 'MatomoReportWidget';
 
     /**
      * Matomo reports
@@ -49,7 +49,7 @@ class Individual extends ReportWidgetBase
                  'default'  => '',
                  'type'     => 'string',
                  'required' => false,
-                 'description' => 'Titel used in the widget. Leave empty to display the default title of the respective widget.'
+                 'description' => 'The title of the widget displayed. Leave empty to display a default title of the chosen report.'
               ],
 
  	            'report' => [
@@ -84,6 +84,7 @@ class Individual extends ReportWidgetBase
              'period' => [
                  'title' => 'Period',
              		 'options'     => [
+                    'last1' => 'Today', 
                			'last7' => 'Last 7 Days',
                			'last30' => 'Last 30 Days',
                			'last360' => 'Last 360 Days',
@@ -120,9 +121,13 @@ class Individual extends ReportWidgetBase
      * to register new assets to include on the page.
      * @return void
      */
+     //
+     // Provide iFrame resizing through iFrameResizer
+     // This can be downloaded from https://github.com/davidjbradshaw/iframe-resizer/tree/master/js
+     //
     protected function loadAssets()
     {
-      $this->addJs('/plugins/mercator/matomo/assets/javascript/iFrameResizer.js');
+      $this->addJs('/plugins/mercator/matomo/assets/js/iFrameResizer.js');
     }
 
     /**

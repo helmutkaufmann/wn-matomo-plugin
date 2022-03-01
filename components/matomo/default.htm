@@ -2,7 +2,15 @@
   <link rel="preload" href="https://{{ matomoServer }}/matomo.js" onload="embedTracker()" type="script" crossorigin>
   <script>
    var _paq = window._paq = window._paq || [];
-   _paq.push(['trackPageView']);
+
+   {% if (matomoExcluded) %}
+       if (!window.location.pathname.match(/({{ matomoExcluded }})/)) {
+         _paq.push(['trackPageView']);
+       }
+    {% else %}
+        _paq.push(['trackPageView']);
+    {% endif %}
+
    _paq.push(['enableLinkTracking']);
    (function() {
      var u="//{{ matomoServer }}/";

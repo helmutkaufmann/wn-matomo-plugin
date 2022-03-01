@@ -2175,6 +2175,13 @@ namespace Mercator\Matomo\Components;
 
 class MatomoTrackerAPI extends ComponentBase {
 
+
+     public static function setResolution($matomoTracker, $width, $height) {
+
+       $matomoTracker->setResolution($width, height);
+
+     }
+
      public function componentDetails()
      {
 
